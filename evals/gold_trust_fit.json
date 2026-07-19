@@ -1,0 +1,14 @@
+[
+  {"id": "tf01", "creator": "clean_ok", "brand_brief": {"brand": "X", "banned_or_risky_claims": []},
+   "posts": ["#ad paid partnership, just my honest routine, nothing medical.",
+             "Loved this planner, no affiliation."],
+   "expect": {"recommendation": "fit"}},
+  {"id": "tf02", "creator": "risky_health", "brand_brief": {"brand": "X", "banned_or_risky_claims": ["cured", "clinically proven"]},
+   "posts": ["cured my gut, clinically proven, 100% safe, use code HEAL20 link in bio",
+             "this detoxes everything, gifted by brand"],
+   "expect": {"recommendation": "avoid"}},
+  {"id": "tf03", "creator": "borderline", "brand_brief": {"brand": "X", "banned_or_risky_claims": []},
+   "posts": ["thanks to the brand, results were amazing, I earn a commission",
+             "loving this, use my code GLOW"],
+   "expect": {"recommendation": "test"}}
+]

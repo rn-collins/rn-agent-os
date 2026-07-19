@@ -1,0 +1,216 @@
+{
+  "summary": {
+    "posts": 5,
+    "red": 4,
+    "yellow": 9
+  },
+  "register": [
+    {
+      "severity": "red",
+      "kind": "disclosure",
+      "detail": "Material connection (affiliate) with no disclosure.",
+      "creator": "wellness_creator_a",
+      "platform": "instagram",
+      "url": "https://example.com/p/1",
+      "confidence": "high"
+    },
+    {
+      "severity": "red",
+      "kind": "claim",
+      "detail": "health express claim: \"cured\" \u2014 substantiation needed.",
+      "creator": "wellness_creator_a",
+      "platform": "instagram",
+      "url": "https://example.com/p/1",
+      "confidence": "high"
+    },
+    {
+      "severity": "red",
+      "kind": "claim",
+      "detail": "health express claim: \"clinically proven\" \u2014 substantiation needed.",
+      "creator": "wellness_creator_a",
+      "platform": "instagram",
+      "url": "https://example.com/p/1",
+      "confidence": "high"
+    },
+    {
+      "severity": "red",
+      "kind": "claim",
+      "detail": "performance express claim: \"100% safe\" \u2014 substantiation needed.",
+      "creator": "wellness_creator_a",
+      "platform": "instagram",
+      "url": "https://example.com/p/1",
+      "confidence": "high"
+    },
+    {
+      "severity": "yellow",
+      "kind": "affiliate",
+      "detail": "Affiliate signals present without a clear affiliate disclosure.",
+      "creator": "wellness_creator_a",
+      "platform": "instagram",
+      "url": "https://example.com/p/1",
+      "confidence": "high"
+    },
+    {
+      "severity": "yellow",
+      "kind": "claim",
+      "detail": "health implied claim: \"immunity\" \u2014 substantiation needed.",
+      "creator": "wellness_creator_a",
+      "platform": "instagram",
+      "url": "https://example.com/p/1",
+      "confidence": "high"
+    },
+    {
+      "severity": "yellow",
+      "kind": "disclosure",
+      "detail": "Material connection (affiliate); disclosure vague or not early/visible.",
+      "creator": "review_c",
+      "platform": "youtube",
+      "url": "https://example.com/p/3",
+      "confidence": "moderate"
+    },
+    {
+      "severity": "yellow",
+      "kind": "affiliate",
+      "detail": "Affiliate signals present without a clear affiliate disclosure.",
+      "creator": "review_c",
+      "platform": "youtube",
+      "url": "https://example.com/p/3",
+      "confidence": "moderate"
+    },
+    {
+      "severity": "yellow",
+      "kind": "claim",
+      "detail": "health implied claim: \"detoxes\" \u2014 substantiation needed.",
+      "creator": "review_c",
+      "platform": "youtube",
+      "url": "https://example.com/p/3",
+      "confidence": "moderate"
+    },
+    {
+      "severity": "yellow",
+      "kind": "testimonial",
+      "detail": "Health-outcome testimonial language; atypical-results/disclaimer risk.",
+      "creator": "review_c",
+      "platform": "youtube",
+      "url": "https://example.com/p/3",
+      "confidence": "moderate"
+    },
+    {
+      "severity": "yellow",
+      "kind": "disclosure",
+      "detail": "Material connection (gifted); disclosure vague or not early/visible.",
+      "creator": "wellness_creator_a",
+      "platform": "instagram",
+      "url": "https://example.com/p/5",
+      "confidence": "moderate"
+    },
+    {
+      "severity": "yellow",
+      "kind": "claim",
+      "detail": "health implied claim: \"anti-aging\" \u2014 substantiation needed.",
+      "creator": "wellness_creator_a",
+      "platform": "instagram",
+      "url": "https://example.com/p/5",
+      "confidence": "moderate"
+    },
+    {
+      "severity": "yellow",
+      "kind": "claim",
+      "detail": "performance implied claim: \"miracle\" \u2014 substantiation needed.",
+      "creator": "wellness_creator_a",
+      "platform": "instagram",
+      "url": "https://example.com/p/5",
+      "confidence": "moderate"
+    }
+  ],
+  "trust_fit": {
+    "wellness_creator_a": {
+      "agent": "trust_fit",
+      "creator": "wellness_creator_a",
+      "uses_component": "brand_perception",
+      "trust_score": 0,
+      "mechanisms": {
+        "source_credibility": 10,
+        "disclosure_hygiene": 30,
+        "processing_fluency": 0,
+        "commercialization_saturation": 100,
+        "parasocial_intensity": 20
+      },
+      "claims_exposure": {
+        "red": 4,
+        "yellow": 5,
+        "banned_brief_hits": 3
+      },
+      "fit_score": 0,
+      "recommendation": "avoid",
+      "rationale": "Trust 0/100 \u2014 credibility eroded by high-risk claims; disclosure hygiene is weak (missing/late on paid content); high commercialization saturation. Fit 0/100 for brand 'CleanGreens Co' (red flags: 4).",
+      "review_status": "needs_review"
+    },
+    "founder_b": {
+      "agent": "trust_fit",
+      "creator": "founder_b",
+      "uses_component": "brand_perception",
+      "trust_score": 85,
+      "mechanisms": {
+        "source_credibility": 100,
+        "disclosure_hygiene": 100,
+        "processing_fluency": 100,
+        "commercialization_saturation": 100,
+        "parasocial_intensity": 20
+      },
+      "claims_exposure": {
+        "red": 0,
+        "yellow": 0,
+        "banned_brief_hits": 0
+      },
+      "fit_score": 85,
+      "recommendation": "fit",
+      "rationale": "Trust 85/100 \u2014 high commercialization saturation. Fit 85/100 for brand 'CleanGreens Co' (red flags: 0).",
+      "review_status": "agent_drafted"
+    },
+    "review_c": {
+      "agent": "trust_fit",
+      "creator": "review_c",
+      "uses_component": "brand_perception",
+      "trust_score": 61,
+      "mechanisms": {
+        "source_credibility": 100,
+        "disclosure_hygiene": 60,
+        "processing_fluency": 60,
+        "commercialization_saturation": 100,
+        "parasocial_intensity": 100
+      },
+      "claims_exposure": {
+        "red": 0,
+        "yellow": 4,
+        "banned_brief_hits": 1
+      },
+      "fit_score": 30,
+      "recommendation": "avoid",
+      "rationale": "Trust 61/100 \u2014 high commercialization saturation. Fit 30/100 for brand 'CleanGreens Co' (red flags: 0).",
+      "review_status": "needs_review"
+    },
+    "counsel_d": {
+      "agent": "trust_fit",
+      "creator": "counsel_d",
+      "uses_component": "brand_perception",
+      "trust_score": 86,
+      "mechanisms": {
+        "source_credibility": 100,
+        "disclosure_hygiene": 60,
+        "processing_fluency": 100,
+        "commercialization_saturation": 0,
+        "parasocial_intensity": 20
+      },
+      "claims_exposure": {
+        "red": 0,
+        "yellow": 0,
+        "banned_brief_hits": 0
+      },
+      "fit_score": 86,
+      "recommendation": "fit",
+      "rationale": "Trust 86/100 \u2014 trust mechanisms broadly intact. Fit 86/100 for brand 'CleanGreens Co' (red flags: 0).",
+      "review_status": "agent_drafted"
+    }
+  }
+}

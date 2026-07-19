@@ -1,0 +1,11 @@
+{
+  "sectors": ["wellness", "cannabis", "legal", "ai"],
+  "creators": [
+    {"handle": "wellness_creator_a", "platform": "instagram", "sector": "wellness"},
+    {"handle": "founder_b", "platform": "tiktok", "sector": "ai"},
+    {"handle": "review_c", "platform": "youtube", "sector": "wellness"},
+    {"handle": "counsel_d", "platform": "linkedin", "sector": "legal"}
+  ],
+  "hashtags": ["#greens", "#adhd", "#legaltech", "#cannabiswellness"],
+  "source": "fixtures"
+}

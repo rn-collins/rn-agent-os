@@ -1,0 +1,59 @@
+{
+  "name": "rn-agent-os — Weekly Creator Risk Pipeline",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": { "interval": [ { "field": "cronExpression", "expression": "0 7 * * 1" } ] }
+      },
+      "id": "cron",
+      "name": "Every Monday 07:00",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1,
+      "position": [ 260, 300 ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://api:8000/pipeline/run",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={ \"persist\": true }",
+        "options": {}
+      },
+      "id": "runpipe",
+      "name": "Run pipeline (Sector Watch → grade → persist)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [ 520, 300 ]
+    },
+    {
+      "parameters": {
+        "conditions": { "number": [ { "value1": "={{ $json.red }}", "operation": "larger", "value2": 0 } ] }
+      },
+      "id": "ifred",
+      "name": "Any RED flags?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [ 780, 300 ]
+    },
+    {
+      "parameters": {
+        "subject": "rn-agent-os: {{ $json.red }} RED flags need review",
+        "text": "Weekly run: {{ $json.posts }} posts, {{ $json.red }} red / {{ $json.yellow }} yellow.\nAudits drafted: {{ JSON.stringify($json.audits_drafted) }}\nReview the queue before anything ships."
+      },
+      "id": "alert",
+      "name": "Alert RN (email/Slack)",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [ 1040, 220 ],
+      "notes": "Swap for Email/Slack node with your creds."
+    }
+  ],
+  "connections": {
+    "Every Monday 07:00": { "main": [ [ { "node": "Run pipeline (Sector Watch → grade → persist)", "type": "main", "index": 0 } ] ] },
+    "Run pipeline (Sector Watch → grade → persist)": { "main": [ [ { "node": "Any RED flags?", "type": "main", "index": 0 } ] ] },
+    "Any RED flags?": { "main": [ [ { "node": "Alert RN (email/Slack)", "type": "main", "index": 0 } ], [] ] }
+  },
+  "settings": {},
+  "active": false
+}

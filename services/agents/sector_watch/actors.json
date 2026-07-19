@@ -1,0 +1,17 @@
+{
+  "_comment": "Apify actor ids per platform + input builders. Swap ids for the actors you license.",
+  "instagram": {"actor": "apify~instagram-scraper",
+                "input": {"resultsType": "posts", "resultsLimit": 20}},
+  "tiktok":    {"actor": "clockworks~tiktok-scraper",
+                "input": {"resultsPerPage": 20}},
+  "youtube":   {"actor": "streamers~youtube-scraper",
+                "input": {"maxResults": 20}},
+  "field_map": {
+    "instagram": {"text": ["caption"], "url": ["url"], "posted_at": ["timestamp"],
+                  "creator": ["ownerUsername"], "likes": ["likesCount"], "comments": ["commentsCount"]},
+    "tiktok":    {"text": ["text"], "url": ["webVideoUrl"], "posted_at": ["createTimeISO"],
+                  "creator": ["authorMeta.name"], "likes": ["diggCount"], "comments": ["commentCount"]},
+    "youtube":   {"text": ["title", "text"], "url": ["url"], "posted_at": ["date"],
+                  "creator": ["channelName"], "likes": ["likes"], "comments": ["commentsCount"]}
+  }
+}
