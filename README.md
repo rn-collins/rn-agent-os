@@ -16,6 +16,21 @@ See **`BRAND-FIRM-MAP.md`** for what belongs inside the firm vs. Aloha siblings.
 - ✅ `services/api` — FastAPI skeleton (`/health`, `/agents/disclosure-claims/run`, stubs)
 - ✅ **`services/agents/disclosure_claims`** — first agent, **runnable offline today**
 
+## Live API (free tier, no database)
+
+The Disclosure + Claims agent needs no database, no model key and no Ollama, so that
+much runs as a hosted endpoint:
+
+- `GET /health`
+- `POST /agents/disclosure-claims/run` — `{"text": "...", "platform": "...", "creator": "..."}`
+
+**https://rn-agent-os.vercel.app**
+
+What is *not* deployed there: Postgres/pgvector, Redis, MinIO, Ollama, n8n and Metabase.
+Anything needing evidence storage, retrieval, the local model, workflows or dashboards
+still requires the self-hosted stack in `docker-compose.yml`. The hosted endpoint is the
+part that can run honestly without them, not a hosted version of the engine.
+
 ## Try the first agent right now (no keys, no Docker)
 
 ```bash
