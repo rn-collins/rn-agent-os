@@ -24,7 +24,7 @@ much runs as a hosted endpoint:
 - `GET /health`
 - `POST /agents/disclosure-claims/run` — `{"text": "...", "platform": "...", "creator": "..."}`
 
-**https://rn-agent-os.vercel.app**
+**https://agentos-blue-rho.vercel.app**
 
 What is *not* deployed there: Postgres/pgvector, Redis, MinIO, Ollama, n8n and Metabase.
 Anything needing evidence storage, retrieval, the local model, workflows or dashboards
