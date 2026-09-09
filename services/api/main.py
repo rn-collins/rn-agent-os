@@ -29,6 +29,28 @@ if FastAPI:
         text: str
         brand_brief: Optional[dict] = None
 
+    @app.get("/")
+    def root():
+        """Landing on the bare URL used to return 404. Say what this is instead, and be
+        explicit that the hosted surface is one agent rather than the whole engine."""
+        return {
+            "service": "rn-agent-os",
+            "what": "The self-hosted engine behind Aloha AI's Agentic Brand Management line.",
+            "hosted_here": [
+                "GET  /health",
+                "POST /agents/disclosure-claims/run  {text, platform, creator, url}",
+            ],
+            "not_hosted_here": [
+                "Postgres/pgvector evidence store", "Redis", "MinIO",
+                "Ollama local model", "n8n workflows", "Metabase dashboards",
+            ],
+            "note": "Only the agent that needs no database, no key and no local model runs here. "
+                    "Everything else requires the self-hosted stack in docker-compose.yml.",
+            "boundary": "Public/permissioned data only. Surfaces disclosure and claims risk for "
+                        "human and counsel review. Not legal advice.",
+            "source": "https://github.com/rn-collins/rn-agent-os",
+        }
+
     @app.get("/health")
     def health():
         return {"status": "ok", "service": "rn-agent-os", "version": "0.1.0"}
